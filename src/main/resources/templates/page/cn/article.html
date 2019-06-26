@@ -27,24 +27,24 @@
     <div class="header">
 
 
-        <header class="img">
-            <div>
-                <div class="w-1200">
-                    <div style="width:25%;height:200px; float:left;display:inline-block;">
-                        <img style="width: 200px;height: 200px;" src="../img/ICABST_LOGO2.png">
-                    </div>
-                    <div style="width:75%;height:200px; float:left;display:inline-block;">
-                        <p class="banner_p" style="padding:50px 0;font-family:'Times New Roman';font-weight:bold" align="right">
-                            Int’l Conf. On Advances in Biological Science and Technology<br/>
-                            2019国际前沿生物科学与技术国际会议(ICABST2019)<br/>
-                            2019年12月26日-28日
-                        </p>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-        </header>
-    </div>
+    <header class="img">
+      <div>
+        <div class="w-1200">
+          <div style="width:25%;height:200px; float:left;display:inline-block;">
+            <img style="width: 200px;height: 200px;" src="../img/ICABST_LOGO2.png">
+          </div>
+          <div style="width:75%;height:200px; float:left;display:inline-block;">
+            <p class="banner_p" style="font-family:'Times New Roman'; line-height: 50px" align="right">
+              Int'l Conf On Advances in Biological Science and Technology<br/>
+			  2019国际前沿生物科学与技术国际会议(ICABST2019)<br/>
+              <i>泰国(曼谷)----2019年12月26日-28日</i>
+            </p>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </header>
+  </div>
 
 
     <div class="navs">
@@ -66,7 +66,7 @@
 
 <div class="w-1200 bg_white pt-30">
 
-    <div class="page; lh-40">
+    <div class="page; f-20 lh-40" style="text-aligh: justify; font-family:'Times New Roman';">
         <div class="page_left col-6-5 fl" style="border-right: 2px dashed; border-color: #c3bfbf; padding: 10px;">
             <div class="background4" style="padding-left:55px; padding-bottom: 10px;">投稿说明</div>
             <div class="public_p pb-20 pl-30">
@@ -86,70 +86,65 @@
                         <div class="layui-form-item three-level-title">
                             <strong>一、投稿人信息（*为必填，编辑部将以投稿人作为第一联系人）</strong>
                         </div>
-                        <div class="layui-form-item">
-                            <div class="layui-inline">
-                                <input type="hidden" id="uploadFileUrlID" name="uploadFileUrl" required lay-verify="required"
-                                       autocomplete="off" class="layui-input">
-                                <label for="usernameId" class="layui-form-label">
-                                    <span class="x-red">*</span>姓名
-                                </label>
-                                <div class="layui-input-inline">
-                                    <input type="text" id="usernameId" name="userName" required lay-verify="required"
-                                           autocomplete="off" class="layui-input">
-                                </div>
+                        <div class="layui-form-item pr-20">
+                            <input type="hidden" id="uploadFileUrlID" name="uploadFileUrl" required lay-verify="required"
+                               autocomplete="off" class="layui-input">
+                            <label for="usernameId" class="layui-form-label">
+                                <span class="x-red">*</span>姓名
+                            </label>
+                            <div class="layui-input-block">
+                                <input type="text" id="usernameId" name="userName" required lay-verify="required"
+                                    autocomplete="off" class="layui-input">
                             </div>
-                            <div class="layui-inline fr">
+                        </div>
+                        <div class="layui-form-item pr-20">
                                 <label for="phoneId" class="layui-form-label">
                                     <span class="x-red">*</span>手机
                                 </label>
-                                <div class="layui-input-inline">
+                                <div class="layui-input-block">
                                     <input type="text" id="phoneId" name="phone" required lay-verify="required"
-                                           autocomplete="off" class="layui-input">
+                                        autocomplete="off" class="layui-input">
                                 </div>
+                            </div>
+                                                
+                        <div class="layui-form-item pr-20">
+                            <label for="emailId" class="layui-form-label">
+                                <span class="x-red">*</span>邮箱
+                            </label>
+                            <div class="layui-input-block">
+                                <input type="text" id="emailId" name="email" required lay-verify="required"
+                                    autocomplete="off" class="layui-input">
                             </div>
                         </div>
-
-                        <div class="layui-form-item">
-                            <div class="layui-inline">
-                                <label for="emailId" class="layui-form-label">
-                                    <span class="x-red">*</span>邮箱
-                                </label>
-                                <div class="layui-input-inline">
-                                    <input type="text" id="emailId" name="email" required lay-verify="required"
-                                           autocomplete="off" class="layui-input">
-                                </div>
-                            </div>
-                            <div class="layui-inline fr">
-                                <label for="qqId" class="layui-form-label">
-                                    QQ
-                                </label>
-                                <div class="layui-input-inline">
-                                    <input type="text" id="qqId" name="qq"
-                                           autocomplete="off" class="layui-input">
-                                </div>
+                        <div class="layui-form-item pr-20">
+                            <label for="qqId" class="layui-form-label">
+                                QQ
+                            </label>
+                            <div class="layui-input-block">
+                                <input type="text" id="qqId" name="qq"
+                                    autocomplete="off" class="layui-input">
                             </div>
                         </div>
-
-                        <div class="layui-form-item">
-                            <div class="layui-inline">
-                                <label for="secondemailId" class="layui-form-label">
-                                    备用邮箱
-                                </label>
-                                <div class="layui-input-inline">
-                                    <input type="text" id="secondemailId" name="secondemail"
-                                           autocomplete="off" class="layui-input">
-                                </div>
-                            </div>
-                            <div class="layui-inline fr">
-                                <label for="wechatId" class="layui-form-label">
-                                    微信
-                                </label>
-                                <div class="layui-input-inline">
-                                    <input type="text" id="wechatId" name="wechat"
-                                           autocomplete="off" class="layui-input">
-                                </div>
+                        						
+                        <div class="layui-form-item pr-20">
+                            <label for="secondemailId" class="layui-form-label">
+                                备用邮箱
+                            </label>
+                            <div class="layui-input-block">
+                                <input type="text" id="secondemailId" name="secondemail"
+                                    autocomplete="off" class="layui-input">
                             </div>
                         </div>
+                        <div class="layui-form-item pr-20">
+                            <label for="wechatId" class="layui-form-label">
+                                微信
+                            </label>
+                            <div class="layui-input-block">
+                                <input type="text" id="wechatId" name="wechat"
+                                    autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+						
                         <div class="layui-form-item pr-20">
                             <label for="positionId" class="layui-form-label">
                                 <span class="x-red">*</span>职称
@@ -191,26 +186,25 @@
                         <div class="layui-form-item three-level-title">
                             <strong>二、通讯作者信息（*为必填，该信息为期刊要求提供，一般情况下不予联系）</strong>
                         </div>
-                        <div class="layui-form-item">
-                            <div class="layui-inline">
+                            <div class="layui-form-item pr-20">
                                 <label for="passportId" class="layui-form-label">
                                    <span class="x-red">*</span>姓名
                                 </label>
-                                <div class="layui-input-inline">
+                                <div class="layui-input-block">
                                     <input type="text" id="passportId" name="passport" required lay-verify="required"
                                            autocomplete="off" class="layui-input">
                                 </div>
                             </div>
-                            <div class="layui-inline fr">
+                            <div class="layui-form-item pr-20">
                                 <label for="birthdayId" class="layui-form-label">
                                     <span class="x-red">*</span>邮箱
                                 </label>
-                                <div class="layui-input-inline">
+                                <div class="layui-input-block">
                                     <input type="text" id="birthdayId" name="birthday" required lay-verify="required"
                                            autocomplete="off" class="layui-input">
                                 </div>
                             </div>
-                        </div>
+
                         <div class="layui-form-item three-level-title">
                             <strong>三、发表相关（*为必填）</strong>
                         </div>
@@ -359,26 +353,25 @@
 			    <div class="clear"></div>
 			  </ul>
 			</div>
-        <div class="f-20 text-center pt-20 pb-20 color-03 f-b">重要日期</div>
+        <div class="f-24 text-center pt-20 pb-20 color-03 f-b">重要日期</div>
 				<div class="pb-10">
         <ul>
-            <p>摘要截止日期: 2019年10月20日</p>
-            <p>全文截稿日期: 长年征稿（本批次7月30日截止）</p>
+            <p>摘要投稿: 2019年10月20日截止</p>
+            <p>全文投稿: 本批次7月30日截止</p>
             <p>会议日期:2019年12月26日-28日</p>
-						<p>参会注册截止: 2019年10月31日</p>
-						<p>**逾期未完成注册，将按照后期注册处理</p>
+			<p>参会注册截止: 2019年10月31日</p>
         </ul>
 				</div>
       <div style="border-top: 2px dashed; border-bottom: 2px dashed; border-color: #c3bfbf; padding: 10px;">
-        <div class="f-20 text-center pt-20 pb-20 color-03 f-b">组织机构</div>
+        <div class="f-24 text-center pt-20 pb-20 color-03 f-b">组织机构</div>
         <ul>
             <p>亚太自然科学与工程协会</p>
         </ul>
       </div>
-        <div class="f-20 text-center pt-20 pb-20 color-03 f-b">联系我们</div>
+        <div class="f-24 text-center pt-20 pb-20 color-03 f-b">联系我们</div>
         <ul>
             <p>联系人：孙老师，刘老师</p>
-						<p>会务邮箱：icabst@apanse.com</p>
+			<p>会务邮箱：icabst@apanse.com</p>
             <p>投稿邮箱：editor@apanse.com</p>
             <p>咨询电话：0371-63226982</p>
             <p>手机号码：18137471420</p>
