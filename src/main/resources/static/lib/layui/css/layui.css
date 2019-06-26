@@ -2395,7 +2395,7 @@ a cite {
 }
 
 .layui-form-pane .layui-form-label {
-    width: 110px;
+    width: 190px;
     padding: 8px 15px;
     height: 38px;
     line-height: 20px;
@@ -2415,7 +2415,7 @@ a cite {
 }
 
 .layui-form-pane .layui-input-block {
-    margin-left: 110px;
+    margin-left: 190px;
     left: -1px
 }
 
