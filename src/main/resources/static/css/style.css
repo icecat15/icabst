@@ -157,7 +157,7 @@
   color: #053065;
 }
 .url ul li .time{
-  background: url(../img/日历.png) no-repeat left 25px center;
+  background: url(../img/日历.png) no-repeat left 15px center;
   background-size:80px;
   background-repeat:no-repeat;
 }
@@ -355,8 +355,8 @@
 
 .banner_p {
   margin: 0;
-  padding: 0;
-  font-size: 30px;
+  padding: 30px 20px 30px 0px;
+  font-size: 35px;
 }
 header.img{
   height: 200px;
@@ -379,7 +379,7 @@ div.background3 {
 }
 
 div.background4 {
-	font-size: 20px;
+	font-size: 26px;
 	font-weight: bold;
 	background: url(../img/title_bg_2.png) no-repeat;
 	color: #525382;
@@ -387,7 +387,7 @@ div.background4 {
 }
 
 div.background5 {
-	font-size: 20px;
+	font-size: 24px;
 	font-weight: bold;
 	background: url(../img/title_bg_1.png) no-repeat;
 	color: #ffffff;
