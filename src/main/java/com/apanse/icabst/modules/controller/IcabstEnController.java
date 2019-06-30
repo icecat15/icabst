@@ -6,10 +6,7 @@ import com.apanse.icabst.modules.dto.SignUpDTO;
 import com.apanse.icabst.modules.service.IcabstService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
@@ -114,12 +111,12 @@ public class IcabstEnController {
         return messages;
     }
 
-    @RequestMapping("/download")
+    @RequestMapping("/download{name}")
     @ResponseBody
-    public Messages download(HttpServletRequest request, HttpServletResponse response){
+    public Messages download(HttpServletRequest request, HttpServletResponse response,@PathVariable("name") String name){
         Messages messages;
         try {
-            messages = icabstService.downloadFile(request,response,"");
+            messages = icabstService.downloadFile(request,response,name);
         } catch (Exception e) {
             messages = Messages.getException(e.getMessage(), null);
         }

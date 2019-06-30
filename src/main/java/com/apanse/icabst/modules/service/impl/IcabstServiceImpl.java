@@ -69,7 +69,7 @@ public class IcabstServiceImpl extends BaseServiceImpl implements IcabstService 
 
     @Override
     public Messages downloadFile(HttpServletRequest request, HttpServletResponse response, String fileName) {
-        return download(request,response,downloadName);
+        return download(request,response,fileName);
     }
 
 
