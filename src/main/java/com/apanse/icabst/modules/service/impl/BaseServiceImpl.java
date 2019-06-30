@@ -1,22 +1,20 @@
 package com.apanse.icabst.modules.service.impl;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.PropertySource;
-
 import com.alibaba.excel.ExcelReader;
 import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.metadata.Sheet;
 import com.alibaba.excel.support.ExcelTypeEnum;
 import com.apanse.icabst.modules.Listener.ExcelListener;
+import com.apanse.icabst.modules.common.Messages;
 import com.apanse.icabst.modules.dto.SignUpDTO;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @program: icabst
@@ -36,6 +34,10 @@ public class BaseServiceImpl {
     protected String fileName;
     @Value("${file_article_name}")
     protected String fileArticleName;
+    @Value("${download_path}")
+    protected String downloadPath;
+    @Value("${download_name}")
+    protected String downloadName;
 
     protected List<SignUpDTO> getDatas(String name) throws FileNotFoundException {
         File file = new File(writePath + name);
@@ -89,6 +91,53 @@ public class BaseServiceImpl {
                 e.printStackTrace();
             }
         }
+    }
+
+
+
+    protected Messages download(HttpServletRequest request, HttpServletResponse response, String fileName){
+        if (fileName != null) {
+            //设置文件路径
+            File file = new File(downloadPath + fileName);
+            //File file = new File(realPath , fileName);
+            if (file.exists()) {
+                response.setContentType("application/force-download");// 设置强制下载不打开
+                response.addHeader("Content-Disposition", "attachment;fileName=" + fileName);// 设置文件名
+                byte[] buffer = new byte[1024];
+                FileInputStream fis = null;
+                BufferedInputStream bis = null;
+                try {
+                    fis = new FileInputStream(file);
+                    bis = new BufferedInputStream(fis);
+                    OutputStream os = response.getOutputStream();
+                    int i = bis.read(buffer);
+                    while (i != -1) {
+                        os.write(buffer, 0, i);
+                        i = bis.read(buffer);
+                    }
+                    return Messages.getSuccess(null);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    if (bis != null) {
+                        try {
+                            bis.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    if (fis != null) {
+                        try {
+                            fis.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }
+        }
+        return Messages.getException("下载失败",null);
+
     }
 
 }

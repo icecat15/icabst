@@ -1,17 +1,18 @@
 package com.apanse.icabst.modules.service.impl;
 
+import com.apanse.icabst.modules.common.Messages;
+import com.apanse.icabst.modules.dto.SignUpDTO;
+import com.apanse.icabst.modules.service.IcabstService;
+import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-
-import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
-
-import com.apanse.icabst.modules.common.Messages;
-import com.apanse.icabst.modules.dto.SignUpDTO;
-import com.apanse.icabst.modules.service.IcabstService;
 
 /**
  * @program: icabst
@@ -65,4 +66,11 @@ public class IcabstServiceImpl extends BaseServiceImpl implements IcabstService 
 
         return Messages.getSuccess(null);
     }
+
+    @Override
+    public Messages downloadFile(HttpServletRequest request, HttpServletResponse response, String fileName) {
+        return download(request,response,downloadName);
+    }
+
+
 }

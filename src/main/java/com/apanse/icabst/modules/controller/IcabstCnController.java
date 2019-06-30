@@ -1,5 +1,9 @@
 package com.apanse.icabst.modules.controller;
 
+import com.apanse.icabst.modules.common.Messages;
+import com.apanse.icabst.modules.dto.NameAndPhoneVO;
+import com.apanse.icabst.modules.dto.SignUpDTO;
+import com.apanse.icabst.modules.service.IcabstService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -8,10 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.apanse.icabst.modules.common.Messages;
-import com.apanse.icabst.modules.dto.NameAndPhoneVO;
-import com.apanse.icabst.modules.dto.SignUpDTO;
-import com.apanse.icabst.modules.service.IcabstService;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * @program: icabst
@@ -116,6 +118,18 @@ public class IcabstCnController {
         Messages messages;
         try {
             messages = icabstService.save(signUpDTO, false);
+        } catch (Exception e) {
+            messages = Messages.getException(e.getMessage(), null);
+        }
+        return messages;
+    }
+
+    @RequestMapping("/download")
+    @ResponseBody
+    public Messages download(HttpServletRequest request, HttpServletResponse response){
+        Messages messages;
+        try {
+            messages = icabstService.downloadFile(request,response,"");
         } catch (Exception e) {
             messages = Messages.getException(e.getMessage(), null);
         }
