@@ -27,52 +27,57 @@ public class IcabstEnController {
 
     @RequestMapping("/")
     public String welcome() {
-        return "/page/en/index";
+        return "/page/en/index.html";
     }
 
     @RequestMapping("/index")
     public String index() {
-        return "/page/en/index";
+        return "/page/en/index.html";
     }
 
     @RequestMapping("/about")
     public String about() {
-        return "/page/en/about";
+        return "/page/en/about.html";
     }
 
     @RequestMapping("/speakers")
     public String speakers() {
-        return "/page/en/speakers";
+        return "/page/en/speakers.html";
     }
 
     @RequestMapping("/program")
     public String program() {
-        return "/page/en/program";
+        return "/page/en/program.html";
     }
 
     @RequestMapping("/organization")
     public String organizer() {
-        return "/page/en/organizer";
+        return "/page/en/organizer.html";
     }
 
     @RequestMapping("/registration")
     public String registration() {
-        return "/page/en/registration";
+        return "/page/en/registration.html";
     }
 
     @RequestMapping("/venue")
     public String venue() {
-        return "/page/en/venue";
+        return "/page/en/venue.html";
     }
 
     @RequestMapping("/submit")
     public String submit() {
-        return "/page/en/submit";
+        return "/page/en/submit.html";
     }
 
     @RequestMapping("/submission")
     public String article() {
-        return "/page/en/submission";
+        return "/page/en/submission.html";
+    }
+
+    @RequestMapping("/sitemap")
+    public String sitemap() {
+        return "/page/en/sitemap.xml";
     }
 
     @RequestMapping("/uploadFile")

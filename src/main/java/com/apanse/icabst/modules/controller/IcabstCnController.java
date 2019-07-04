@@ -27,62 +27,58 @@ public class IcabstCnController {
 
     @RequestMapping("")
     public String welcome() {
-        return "/page/cn/index";
+        return "/page/cn/index.html";
     }
 
     @RequestMapping("/index")
     public String index() {
-        return "/page/cn/index";
+        return "/page/cn/index.html";
     }
 
     @RequestMapping("/about")
     public String about() {
-        return "/page/cn/about";
+        return "/page/cn/about.html";
     }
 
     @RequestMapping("/organization")
     public String organization() {
-        return "/page/cn/organization";
+        return "/page/cn/organization.html";
     }
 
     @RequestMapping("/speakers")
     public String speakers() {
-        return "/page/cn/speakers";
+        return "/page/cn/speakers.html";
     }
 
     @RequestMapping("/program")
     public String program() {
-        return "/page/cn/program";
+        return "/page/cn/program.html";
     }
 
     @RequestMapping("/cfp")
     public String cfp() {
-        return "/page/cn/cfp";
+        return "/page/cn/cfp.html";
     }
 
     @RequestMapping("/registration")
     public String registration() {
-        return "/page/cn/registration";
+        return "/page/cn/registration.html";
     }
 
     @RequestMapping("/venue")
     public String venue() {
-        return "/page/cn/venue";
+        return "/page/cn/venue.html";
     }
 
-    // @RequestMapping("/save")
-    // public String save() {
-    // return "/page/cn/save";
-    // }
 
     @RequestMapping("/submit")
     public String submit() {
-        return "/page/cn/submit";
+        return "/page/cn/submit.html";
     }
 
     @RequestMapping("/article")
     public String article() {
-        return "/page/cn/article";
+        return "/page/cn/article.html";
     }
 
     @RequestMapping("/uploadFile")
