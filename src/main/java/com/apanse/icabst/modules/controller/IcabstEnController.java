@@ -75,7 +75,7 @@ public class IcabstEnController {
         return "/page/en/submission.html";
     }
 
-    @RequestMapping("/sitemap")
+    @RequestMapping("/sitemap.xml")
     public String sitemap() {
         return "/page/en/sitemap.xml";
     }
