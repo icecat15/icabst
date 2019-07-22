@@ -295,16 +295,16 @@ var _hmt = _hmt || [];
                             </div>
                         </div>
                         <div class="layui-form-item pr-20">
-                            <label for="titleId" class="layui-form-label">所有作者</label>
+                            <label for="allauthorsID" class="layui-form-label">所有作者</label>
                             <div class="layui-input-block">
-                                <input type="text" id="titleId" name="title" 
+                                <input type="text" id="allauthorsID" name="allauthors"
                                        autocomplete="off" class="layui-input">
                             </div>
                         </div>
 						                        <div class="layui-form-item pr-20">
-						    <label for="titleId" class="layui-form-label">其他说明</label>
+						    <label for="otherInstructionsID" class="layui-form-label">其他说明</label>
 						    <div class="layui-input-block">
-						        <input type="text" id="titleId" name="title"
+						        <input type="text" id="otherInstructionsID" name="otherInstructions"
 						               autocomplete="off" class="layui-input">
 						    </div>
 						</div>
@@ -447,7 +447,7 @@ var _hmt = _hmt || [];
                 dataType: "json",
                 async: false,
                 contentType: "application/json;charset-UTF-8",
-                url: "/cn/saveEXC",
+                url: "/cn/saveArticleEXC",
                 success: function (data) {
                     if (data.code == '000000') {
                         layer.alert("提交成功", {icon: 6}, function () {

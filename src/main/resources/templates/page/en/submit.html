@@ -98,7 +98,7 @@ var _hmt = _hmt || [];
                         </div>
 						
                         <div class="layui-form-item pr-20">
-                                <input type="hidden" id="uploadFileUrlID" name="uploadFileUrl" required lay-verify="required"
+                                <input type="hidden" id="uploadFileUrlID" name="uploadFileUrl"
                                    autocomplete="off" class="layui-input">
                                 <label for="usernameId" class="layui-form-label">
                                     <span class="x-red">*</span>Name
@@ -475,7 +475,7 @@ var _hmt = _hmt || [];
                 dataType: "json",
                 async: false,
                 contentType: "application/json;charset-UTF-8",
-                url: "/cnsaveEXC",
+                url: "/saveEXC",
                 success: function (data) {
                     if (data.code == '000000') {
                         layer.alert("Submission Succeed", {icon: 6}, function () {
