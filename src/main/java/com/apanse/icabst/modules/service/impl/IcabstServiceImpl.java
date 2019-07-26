@@ -67,6 +67,25 @@ public class IcabstServiceImpl extends BaseServiceImpl implements IcabstService 
         return Messages.getSuccess(null);
     }
 
+
+    @Override
+    public Messages enSave(SignUpDTO signUpDTO, boolean open) throws Exception {
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        signUpDTO.setCreatTime(format.format(new Date()));
+
+        if (open) {
+            List<SignUpDTO> datas = getDatas(enFileName);
+            datas.add(signUpDTO);
+            write(datas, enFileName);
+        } else {
+            List<SignUpDTO> datas = getDatas(fileArticleName);
+            datas.add(signUpDTO);
+            write(datas, fileArticleName);
+        }
+
+        return Messages.getSuccess(null);
+    }
+
     @Override
     public Messages downloadFile(HttpServletRequest request, HttpServletResponse response, String fileName) {
         return download(request,response,fileName);

@@ -23,4 +23,6 @@ public interface IcabstService {
 
     Messages downloadFile(HttpServletRequest request, HttpServletResponse response, String fileName);
 
+    Messages enSave(SignUpDTO signUpDTO, boolean open) throws Exception;
+
 }

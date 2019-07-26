@@ -97,7 +97,7 @@ public class IcabstEnController {
     public Messages save(@RequestBody SignUpDTO signUpDTO) {
         Messages messages;
         try {
-            messages = icabstService.save(signUpDTO, true);
+            messages = icabstService.enSave(signUpDTO, true);
         } catch (Exception e) {
             messages = Messages.getException(e.getMessage(), null);
         }

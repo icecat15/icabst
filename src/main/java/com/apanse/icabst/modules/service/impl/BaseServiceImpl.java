@@ -38,6 +38,8 @@ public class BaseServiceImpl {
     protected String downloadPath;
     @Value("${download_name}")
     protected String downloadName;
+    @Value("${en_file_name}")
+    protected String enFileName;
 
     protected List<SignUpDTO> getDatas(String name) throws FileNotFoundException {
         File file = new File(writePath + name);
