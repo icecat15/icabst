@@ -82,7 +82,7 @@ public class BaseServiceImpl {
 
                 ExcelReader excelReader = new ExcelReader(in, ExcelTypeEnum.XLSX, null, excelListener);
 
-                excelReader.read(new Sheet(1, 1, SignUpDTO.class));
+                excelReader.read(new Sheet(1, 1, EnSignUoDTO.class));
 
                 datas = excelListener.getDatas();
             } catch (Exception e) {
@@ -138,7 +138,7 @@ public class BaseServiceImpl {
         try {
             ExcelWriter writer = new ExcelWriter(out, ExcelTypeEnum.XLSX);
             // 写第一个sheet, sheet1 数据全是List<String> 无模型映射关系
-            Sheet sheet1 = new Sheet(1, 0, SignUpDTO.class);
+            Sheet sheet1 = new Sheet(1, 0, EnSignUoDTO.class);
             writer.write(datas, sheet1);
             writer.finish();
         } catch (Exception e) {

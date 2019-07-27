@@ -93,7 +93,7 @@ public class IcabstEnController {
         return messages;
     }
 
-    @RequestMapping("/saveEXC")
+    @RequestMapping("/enSaveEXC")
     @ResponseBody
     public Messages save(@RequestBody EnSignUoDTO signUpDTO) {
         Messages messages;

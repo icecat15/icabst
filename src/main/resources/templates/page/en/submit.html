@@ -475,7 +475,7 @@ var _hmt = _hmt || [];
                 dataType: "json",
                 async: false,
                 contentType: "application/json;charset-UTF-8",
-                url: "/saveEXC",
+                url: "/enSaveEXC",
                 success: function (data) {
                     if (data.code == '000000') {
                         layer.alert("Submission Succeed", {icon: 6}, function () {
@@ -499,7 +499,7 @@ var _hmt = _hmt || [];
         var demoListView = $('#demoList')
         var uploadListIns = upload.render({
             elem: '#testList'
-            , url: '/cnuploadFile'
+            , url: '/uploadFile'
             , accept: 'file'
             , multiple: false
             , auto: true

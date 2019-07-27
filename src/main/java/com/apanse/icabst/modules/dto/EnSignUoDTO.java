@@ -17,50 +17,68 @@ import lombok.NoArgsConstructor;
 @Builder
 public class EnSignUoDTO extends BaseRowModel {
 
-    @ExcelProperty(index = 0, value = "userName")
+    @ExcelProperty(index = 0, value = "Name")
     private String userName;
     @ExcelProperty(index = 1, value = "phone")
     private String phone;
-    @ExcelProperty(index = 1, value = "position")
+    @ExcelProperty(index = 2, value = "Title")
     private String position;
-    @ExcelProperty(index = 2, value = "邮箱")
+    @ExcelProperty(index = 3, value = "邮箱")
     private String email;
-    @ExcelProperty(index = 3, value = "QQ")
+    @ExcelProperty(index = 4, value = "Mobile")
     private String qq;
-    @ExcelProperty(index = 2, value = "secondemail")
+    @ExcelProperty(index = 5, value = "Alternative Email")
     private String secondemail;
-    @ExcelProperty(index = 2, value = "country")
+    @ExcelProperty(index = 6, value = "Country")
     private String country;
-    @ExcelProperty(index = 8, value = "researchField")
+    @ExcelProperty(index = 7, value = "Research Interests")
     private String researchField;
-    @ExcelProperty(index = 6, value = "affiliation")
+    @ExcelProperty(index = 8, value = "Affiliation")
     private String affiliation;
-    @ExcelProperty(index = 2, value = "hindex")
+    @ExcelProperty(index = 9, value = "H-index")
     private String hindex;
-    @ExcelProperty(index = 7, value = "address")
+    @ExcelProperty(index = 10, value = "address")
     private String address;
-    @ExcelProperty(index = 7, value = "dietary")
+    @ExcelProperty(index = 11, value = "Dietary")
     private String dietary;
-    @ExcelProperty(index = 7, value = "passport")
+    @ExcelProperty(index = 12, value = "Passport No")
     private String passport;
-    @ExcelProperty(index = 7, value = "birthday")
+    @ExcelProperty(index = 13, value = "Date of Birth")
     private String birthday;
-    @ExcelProperty(index = 7, value = "arrival")
+    @ExcelProperty(index = 14, value = "Arrival Date")
     private String arrival;
-    @ExcelProperty(index = 7, value = "departure")
+    @ExcelProperty(index = 15, value = "Departure Date")
     private String departure;
-    @ExcelProperty(index = 7, value = "conferenceType")
+    @ExcelProperty(index = 16, value = "Presentation Type")
     private String conferenceType;
-    @ExcelProperty(index = 7, value = "registerType")
+    @ExcelProperty(index = 17, value = "Registration Type")
     private String registerType;
-    @ExcelProperty(index = 7, value = "issue")
+    @ExcelProperty(index = 18, value = "Session")
     private String issue;
-    @ExcelProperty(index = 7, value = "title")
+    @ExcelProperty(index = 19, value = "Presentation Title")
     private String title;
-
-    @ExcelProperty(index = 16, value = "creatTime", format = "yyyy-MM-dd HH:mm:ss")
+    @ExcelProperty(index = 20, value = "creatTime", format = "yyyy-MM-dd HH:mm:ss")
     private String creatTime;
+    @ExcelProperty(index = 21, value = "Payment Method")
+    private String payment;
+    @ExcelProperty(index = 21, value = "uploadFileUrl")
+    private String uploadFileUrl;
 
+    public String getUploadFileUrl() {
+        return uploadFileUrl;
+    }
+
+    public void setUploadFileUrl(String uploadFileUrl) {
+        this.uploadFileUrl = uploadFileUrl;
+    }
+
+    public String getPayment() {
+        return payment;
+    }
+
+    public void setPayment(String payment) {
+        this.payment = payment;
+    }
 
     public String getUserName() {
         return userName;
