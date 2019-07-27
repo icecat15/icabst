@@ -1,6 +1,7 @@
 package com.apanse.icabst.modules.service;
 
 import com.apanse.icabst.modules.common.Messages;
+import com.apanse.icabst.modules.dto.EnSignUoDTO;
 import com.apanse.icabst.modules.dto.SignUpDTO;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -23,6 +24,6 @@ public interface IcabstService {
 
     Messages downloadFile(HttpServletRequest request, HttpServletResponse response, String fileName);
 
-    Messages enSave(SignUpDTO signUpDTO, boolean open) throws Exception;
+    Messages enSave(EnSignUoDTO signUpDTO, boolean open) throws Exception;
 
 }

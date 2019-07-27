@@ -1,6 +1,7 @@
 package com.apanse.icabst.modules.service.impl;
 
 import com.apanse.icabst.modules.common.Messages;
+import com.apanse.icabst.modules.dto.EnSignUoDTO;
 import com.apanse.icabst.modules.dto.SignUpDTO;
 import com.apanse.icabst.modules.service.IcabstService;
 import org.springframework.stereotype.Service;
@@ -69,18 +70,18 @@ public class IcabstServiceImpl extends BaseServiceImpl implements IcabstService 
 
 
     @Override
-    public Messages enSave(SignUpDTO signUpDTO, boolean open) throws Exception {
+    public Messages enSave(EnSignUoDTO signUpDTO, boolean open) throws Exception {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         signUpDTO.setCreatTime(format.format(new Date()));
 
         if (open) {
-            List<SignUpDTO> datas = getDatas(enFileName);
+            List<EnSignUoDTO> datas = getEnDatas(enFileName);
             datas.add(signUpDTO);
-            write(datas, enFileName);
+            enWrite(datas, enFileName);
         } else {
-            List<SignUpDTO> datas = getDatas(fileArticleName);
+            List<EnSignUoDTO> datas = getEnDatas(fileArticleName);
             datas.add(signUpDTO);
-            write(datas, fileArticleName);
+            enWrite(datas, fileArticleName);
         }
 
         return Messages.getSuccess(null);

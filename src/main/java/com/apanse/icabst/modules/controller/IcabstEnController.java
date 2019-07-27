@@ -1,6 +1,7 @@
 package com.apanse.icabst.modules.controller;
 
 import com.apanse.icabst.modules.common.Messages;
+import com.apanse.icabst.modules.dto.EnSignUoDTO;
 import com.apanse.icabst.modules.dto.NameAndPhoneVO;
 import com.apanse.icabst.modules.dto.SignUpDTO;
 import com.apanse.icabst.modules.service.IcabstService;
@@ -94,7 +95,7 @@ public class IcabstEnController {
 
     @RequestMapping("/saveEXC")
     @ResponseBody
-    public Messages save(@RequestBody SignUpDTO signUpDTO) {
+    public Messages save(@RequestBody EnSignUoDTO signUpDTO) {
         Messages messages;
         try {
             messages = icabstService.enSave(signUpDTO, true);
