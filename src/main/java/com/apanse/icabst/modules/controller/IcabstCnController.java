@@ -70,7 +70,6 @@ public class IcabstCnController {
         return "/page/cn/venue.html";
     }
 
-
     @RequestMapping("/submit")
     public String submit() {
         return "/page/cn/submit.html";
@@ -80,6 +79,33 @@ public class IcabstCnController {
     public String article() {
         return "/page/cn/article.html";
     }
+
+    @RequestMapping("/sci1")
+    public String sci1() {
+        return "/page/cn/sci1.html";
+    }
+
+    @RequestMapping("/sci2")
+    public String sci2() {
+        return "/page/cn/sci2.html";
+    }
+
+    @RequestMapping("/sci3")
+    public String sci3() {
+        return "/page/cn/sci3.html";
+    }
+
+    @RequestMapping("/sciabstract")
+    public String sciabstract() {
+        return "/page/cn/sciabstract.html";
+    }
+
+    @RequestMapping("/cpci")
+    public String cpci() {
+        return "/page/cn/cpci.html";
+    }
+
+
 
     @RequestMapping("/uploadFile")
     @ResponseBody
