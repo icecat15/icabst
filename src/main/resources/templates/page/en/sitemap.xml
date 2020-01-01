@@ -48,6 +48,18 @@
  <changefreq>weekly</changefreq>
 </url>
 <url>
+ <loc>http://icabst.apanse.com/achieve</loc>
+ <priority>0.4</priority>
+ <lastmod>2019-09-23</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://icabst.apanse.com/proposal</loc>
+ <priority>0.4</priority>
+ <lastmod>2019-09-23</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
  <loc>http://icabst.apanse.com/venue</loc>
  <priority>0.3</priority>
  <lastmod>2019-09-23</lastmod>
@@ -127,6 +139,18 @@
 </url>
 <url>
  <loc>http://icabst.apanse.com/cn/registration</loc>
+ <priority>0.4</priority>
+ <lastmod>2019-09-23</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://icabst.apanse.com/cn/achieve</loc>
+ <priority>0.4</priority>
+ <lastmod>2019-09-23</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://icabst.apanse.com/cn/proposal</loc>
  <priority>0.4</priority>
  <lastmod>2019-09-23</lastmod>
  <changefreq>weekly</changefreq>
