@@ -36,7 +36,7 @@ public class FlieController {
         return messages;
     }
 
-    @RequestMapping("/cn//saveArticleEXC")
+    @RequestMapping("/cn/saveArticleEXC")
     @ResponseBody
     public Messages cnSaveArticleEXC(@RequestBody SignUpDTO signUpDTO) {
         Messages messages;
@@ -48,7 +48,7 @@ public class FlieController {
         return messages;
     }
 
-    @RequestMapping("/cn//download/{name}")
+    @RequestMapping("/cn/download/{name}")
     @ResponseBody
     public Messages cnDownload(HttpServletRequest request, HttpServletResponse response, @PathVariable("name") String name){
         Messages messages;
