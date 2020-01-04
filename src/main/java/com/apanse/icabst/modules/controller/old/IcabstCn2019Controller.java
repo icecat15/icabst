@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
  * @Description:
  */
 @Controller
-@RequestMapping("/2019/cn")
+@RequestMapping("/2019cn")
 public class IcabstCn2019Controller {
 
     @Autowired
