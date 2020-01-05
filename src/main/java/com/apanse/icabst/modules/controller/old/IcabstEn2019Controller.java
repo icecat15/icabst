@@ -92,4 +92,39 @@ public class IcabstEn2019Controller {
     }
 
 
+    @RequestMapping("/saveEXC")
+    @ResponseBody
+    public Messages cnSave(@RequestBody SignUpDTO signUpDTO) {
+        Messages messages;
+        try {
+            messages = icabstService.save(signUpDTO, true);
+        } catch (Exception e) {
+            messages = Messages.getException(e.getMessage(), null);
+        }
+        return messages;
+    }
+
+    @RequestMapping("/saveArticleEXC")
+    @ResponseBody
+    public Messages cnSaveArticleEXC(@RequestBody SignUpDTO signUpDTO) {
+        Messages messages;
+        try {
+            messages = icabstService.save(signUpDTO, false);
+        } catch (Exception e) {
+            messages = Messages.getException(e.getMessage(), null);
+        }
+        return messages;
+    }
+
+    @RequestMapping("/download/{name}")
+    @ResponseBody
+    public Messages cnDownload(HttpServletRequest request, HttpServletResponse response, @PathVariable("name") String name){
+        Messages messages;
+        try {
+            messages = icabstService.downloadFile(request,response,name);
+        } catch (Exception e) {
+            messages = Messages.getException(e.getMessage(), null);
+        }
+        return messages;
+    }
 }
