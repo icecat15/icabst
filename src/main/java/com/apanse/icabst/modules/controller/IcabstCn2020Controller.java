@@ -2,11 +2,13 @@ package com.apanse.icabst.modules.controller;
 
 
 import com.apanse.icabst.modules.common.Messages;
+import com.apanse.icabst.modules.dto.NameAndPhoneVO;
 import com.apanse.icabst.modules.dto.SignUpDTO;
 import com.apanse.icabst.modules.service.IcabstService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -115,6 +117,18 @@ public class IcabstCn2020Controller {
         return "/page/2020/cn/proposal.html";
     }
 
+
+    @RequestMapping("/uploadFile")
+    @ResponseBody
+    public Messages uploadFile(@RequestParam("file") MultipartFile file, NameAndPhoneVO nameAndPhoneVO) {
+        Messages messages;
+        try {
+            messages = icabstService.uploadFile(file);
+        } catch (Exception e) {
+            messages = Messages.getException(e.getMessage(), null);
+        }
+        return messages;
+    }
 
     @RequestMapping("/saveEXC")
     @ResponseBody
