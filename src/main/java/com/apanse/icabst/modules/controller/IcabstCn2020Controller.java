@@ -117,6 +117,11 @@ public class IcabstCn2020Controller {
         return "/page/2020/cn/proposal.html";
     }
 
+    @RequestMapping("/suspension")
+    public String suspension() {
+        return "/page/2020/cn/suspension.html";
+    }
+
 
     @RequestMapping("/uploadFile")
     @ResponseBody

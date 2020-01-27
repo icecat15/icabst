@@ -241,3 +241,5 @@ input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit
 
 /*border_bottom*/
 .border_bottom-1{border-bottom:1px solid #d9d4d4;}
+.float_right{float: right;}
+.float_left{float: left;}
