@@ -141,11 +141,12 @@
 }
 
 .url ul li{
-  background: #ffffff;
+  background: #f2f4f9;
   float: left;
   margin-left:30px;
-  margin-top:15px;
-  border:1px dashed #000;
+  margin-top:10px;
+  border:1px solid #600;
+	border-radius: 25px;
 }
 .url ul li a{
   display: inline-block;
@@ -181,7 +182,7 @@
 }
 
 .url ul li .time span{
-  background: #525382;
+  background: #660000;
   border-radius: 20px;
   padding: 10px 5px 10px 5px;
   color: #FFFFFF;
@@ -330,15 +331,15 @@
   height:3px;
 }
 .sponsors ul {
-  width: 95%;
+  width: 90%;
   margin:0px auto;
   padding: 10px 0px 10px 0;
 
 }
 .sponsors ul li {
-  height: 45px;
+  height: 50px;
   float: left;
-  margin-right: 10px;
+  margin-right: 20px;
   margin-bottom: 10px;
 }
 
@@ -359,39 +360,40 @@
   font-size: 35px;
 }
 header.img{
-  height: 200px;
-  background: url("../img/top_bg.png");
+  height: 170px;
+  background: #e1edff;
+	background-size: 100% 100%;
 }
 
 
 div.background1{
-  background: #525382;
+  background: #660000;
   color:#FFF;
 	line-height: 40px;
 }
 
 div.background3 {
-	font-size: 25px;
+	font-size: 20px;
 	font-weight: bold;
 	background: url(../img/title_bg_2.png) no-repeat;
-	color: #525382;
-	background-size: 20% 90%;
+	color: #660000;
+	background-size: 12% 90%;
 }
 
 div.background4 {
-	font-size: 26px;
+	font-size: 18px;
 	font-weight: bold;
 	background: url(../img/title_bg_2.png) no-repeat;
-	color: #525382;
-	background-size: 20% 90%;
+	color: #660000;
+	background-size: 15% 90%;
 }
 
 div.background5 {
-	font-size: 24px;
+	font-size: 18px;
 	font-weight: bold;
 	background: url(../img/title_bg_1.png) no-repeat;
 	color: #ffffff;
-	background-size: 20% 110%;
+	background-size: 15% 100%;
 
 /*other*/
 .public_h{

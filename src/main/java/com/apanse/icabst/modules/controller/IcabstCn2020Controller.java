@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  * @Description:
  */
 @Controller
-@RequestMapping("/cn")
+@RequestMapping("/2020/cn")
 public class IcabstCn2020Controller {
 
     @Autowired

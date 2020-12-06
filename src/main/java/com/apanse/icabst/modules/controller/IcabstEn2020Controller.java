@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  * @Description:
  */
 @Controller
-@RequestMapping("/")
+@RequestMapping("/2020")
 public class IcabstEn2020Controller {
 
     @Autowired
