@@ -28,7 +28,7 @@ public class IcabstEn2020Controller {
     @Autowired
     private IcabstService icabstService;
 
-    @RequestMapping("/")
+    @RequestMapping("")
     public String welcome() {
         return "/page/2020/en/index.html";
     }
