@@ -122,6 +122,11 @@ public class IcabstCn2021Controller {
         return "/page/2021/cn/suspension.html";
     }
 
+    @RequestMapping("/wpcr")
+    public String wpcr() {
+        return "/page/2021/cn/wpcr.html";
+    }
+
 
     @RequestMapping("/uploadFile")
     @ResponseBody

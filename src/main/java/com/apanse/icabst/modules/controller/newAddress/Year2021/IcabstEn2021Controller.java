@@ -93,6 +93,11 @@ public class IcabstEn2021Controller {
         return "/page/2021/en/proposal.html";
     }
 
+    @RequestMapping("/wpcr")
+    public String wpcr() {
+        return "/page/2021/en/wpcr.html";
+    }
+
     @RequestMapping("/uploadFile")
     @ResponseBody
     public Messages uploadFile(@RequestParam("file") MultipartFile file, NameAndPhoneVO nameAndPhoneVO) {
